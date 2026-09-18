@@ -1,3 +1,4 @@
+const API_URL = "https://music-finder-player-backend.onrender.com";
 const searchInput = document.getElementById("searchInput");
 const tracksList = document.getElementById("tracksList");
 const resultCount = document.getElementById("resultCount");
@@ -72,7 +73,7 @@ async function searchTracks(query) {
 
   try {
     const response = await fetch(
-      `https://music-finder-player-backend.onrender.com/api/search?q=${encodeURIComponent(search)}`,
+      `${API_URL}/api/search?q=${encodeURIComponent(search)}`,
     );
 
     const data = await response.json();
@@ -183,7 +184,7 @@ async function playTrack(track) {
 
   try {
     const response = await fetch(
-      `http://127.0.0.1:5000/api/audio?url=${encodeURIComponent(track.url)}`,
+      `${API_URL}/api/audio?url=${encodeURIComponent(track.url)}`,
     );
 
     const data = await response.json();
