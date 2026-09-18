@@ -75,7 +75,7 @@ def audio():
 
 if __name__ == "__main__":
     app.run(
-        host="127.0.0.1",
+        host="https://music-finder-player.onrender.com/",
         port=5000,
         debug=True
     )
