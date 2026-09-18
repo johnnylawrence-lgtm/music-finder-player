@@ -72,7 +72,7 @@ async function searchTracks(query) {
 
   try {
     const response = await fetch(
-      `http://127.0.0.1:5000/api/search?q=${encodeURIComponent(search)}`,
+      `https://music-finder-player-backend.onrender.com/api/search?q=${encodeURIComponent(search)}`,
     );
 
     const data = await response.json();
